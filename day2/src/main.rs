@@ -34,18 +34,18 @@ fn part1() {
         //assuming is not gonna be empty
         let dif = report[0] - report[1];
         let mut counter = 0usize;
-        for x in 0..report.len() - 1 {
+        for level in 0..report.len() - 1 {
             match dif {
                 //decrasing
                 1..=3 => {
-                    let temp = report[x] - report[x + 1];
+                    let temp = report[level] - report[level + 1];
                     if !(1..=3).contains(&temp) {
                         break;
                     }
                 }
                 //increasing
                 -3..=-1 => {
-                    let temp = report[x] - report[x + 1];
+                    let temp = report[level] - report[level + 1];
                     if !(-3..=-1).contains(&temp) {
                         break;
                     }
